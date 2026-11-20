@@ -1,0 +1,26 @@
+<a class="back-link" routerLink="/">← &nbsp;Back to search</a>
+@if (loading) {
+  <div class="details-card loading">Loading flight details...</div>
+} @else if (errorMessage || !flight) {
+  <div class="details-card error">{{ errorMessage || 'Flight not found.' }} <a routerLink="/">Back to search</a></div>
+} @else {
+  <section class="details-card">
+    <div class="details-heading">
+      <div><span class="eyebrow">FLIGHT DETAILS</span><h1>{{ flight.airline }}</h1><p>Flight {{ flight.flightNumber }} · {{ flight.aircraft }}</p></div>
+      <strong class="detail-price">{{ flight.price | currency:'INR':'symbol':'1.2-2' }}</strong>
+    </div>
+    <div class="route-detail">
+      <div class="airport"><strong>{{ flight.departureTime }}</strong><b>{{ flight.from }}</b><span>{{ flight.fromCity }}</span><small>{{ flight.departureDate | date:'MMM d, y' }}</small></div>
+      <div class="journey"><span>{{ flight.duration }}</span><div class="route-track"><i></i></div><span>{{ flight.stopLabel }}</span></div>
+      <div class="airport right"><strong>{{ flight.arrivalTime }}</strong><b>{{ flight.to }}</b><span>{{ flight.toCity }}</span><small>{{ flight.arrivalTime < flight.departureTime ? 'Next day arrival' : 'Same day arrival' }}</small></div>
+    </div>
+    <div class="info-grid">
+      <div class="info-item"><span>Cabin class</span><strong>{{ flight.cabinClass }}</strong></div>
+      <div class="info-item"><span>Baggage allowance</span><strong>{{ flight.baggage }}</strong></div>
+      <div class="info-item"><span>Stops</span><strong>{{ flight.stopLabel }}</strong></div>
+      <div class="info-item"><span>Return date</span><strong>{{ flight.returnDate | date:'MMM d, y' }}</strong></div>
+      @if (flight.layover) { <div class="info-item full"><span>Layover information</span><strong>{{ flight.layover }}</strong></div> }
+    </div>
+    <div class="details-note">Displayed fare is a sample fare from the local mock API and is not a live booking price.</div>
+  </section>
+}

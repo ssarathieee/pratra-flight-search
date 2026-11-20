@@ -1,0 +1,16 @@
+:host{display:block;max-width:1000px;margin:0 auto}
+.back-link{display:inline-block;color:#2863a8;text-decoration:none;font-size:13px;font-weight:650;margin:0 0 22px}
+.details-card{background:#fff;border:1px solid #e7edf4;border-radius:15px;padding:27px;box-shadow:0 5px 22px #1830520b}
+.details-heading{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:23px;border-bottom:1px solid #edf0f5}
+.eyebrow{font-size:10px;letter-spacing:1.2px;font-weight:800;color:#7890b0}
+h1{font-size:24px;color:#1a2b43;margin:7px 0 5px;letter-spacing:-.6px}
+.details-heading p{font-size:12px;color:#78869a;margin:0}
+.detail-price{font-size:23px;color:#1c2d45}
+.route-detail{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:20px;align-items:center;padding:32px 8px}
+.airport{display:flex;flex-direction:column;gap:7px}.airport strong{font-size:25px;color:#1a2b43}.airport b{font-size:17px;color:#2b5f9f}.airport span,.airport small{font-size:12px;color:#7c899b}.right{text-align:right}
+.journey{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;color:#7b8798}.route-track{width:100%;height:1px;background:#d7e0ec;position:relative}.route-track:before,.route-track:after{content:"";position:absolute;top:-3px;width:7px;height:7px;border:1px solid #9eb1c9;background:#fff;border-radius:50%}.route-track:before{left:0}.route-track:after{right:0}.route-track i{position:absolute;width:8px;height:8px;border-radius:50%;background:#2869bb;top:-4px;left:50%}
+.info-grid{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;gap:12px;border-top:1px solid #edf0f5;padding-top:22px}
+.info-item{display:flex;flex-direction:column;gap:8px}.info-item span{font-size:10px;color:#8a96a7;text-transform:uppercase;letter-spacing:.5px}.info-item strong{font-size:13px;color:#2b3c55;line-height:1.5}.info-item.full{grid-column:1/-1}
+.details-note{margin-top:25px;padding:12px;background:#f5f8fc;color:#8390a2;border-radius:7px;font-size:11px}
+.loading,.error{padding:35px;color:#536176}.error a{margin-left:10px;color:#2863a8}
+@media(max-width:650px){.details-card{padding:19px}.route-detail{gap:8px;padding:26px 0}.airport strong{font-size:20px}.info-grid{grid-template-columns:1fr 1fr}.detail-price{font-size:19px}h1{font-size:21px}}
